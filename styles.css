@@ -286,6 +286,10 @@ label{
     font-size: 1rem;
 }
 
+h1{
+    font-weight: 900;
+    padding: 20px 0;
+}
 
 
 /*ajustements pour les écrans les moins larges*/
