@@ -251,11 +251,11 @@ p {
 }
 
 .tabs nav label {
-    width: 150px;
     align-items: center;
+    width: auto;
 }
 .tabs nav  {
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 
@@ -285,7 +285,6 @@ input[type="radio"]:checked+label::after{
 /*ajustements pour les écrans les moins larges*/
 @media all  and (max-width : 767px) {
     .tabs nav label {
-        width: 100px;
         align-items: center;
         font-size: 0.6rem;
     }
