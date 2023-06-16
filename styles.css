@@ -280,6 +280,11 @@ input[type="radio"]:checked+label::after{
     width: 100%;
 }
 
+nav a:hover, nav label:hover{
+    color: rgb(14, 70, 255);
+    background-color: rgb(247, 247, 247);
+    border-radius: 3px;
+}
 
 
 label{
@@ -301,6 +306,27 @@ h1{
     input[type="radio"]{
     }
 
+    nav a{
+        display: none;
+    }
+    nav ::before{
+        content: "menu";
+    }
+
+    header:hover nav a{
+        display: block;
+        border: solid 1px grey;
+    }
  
+    header:hover nav{
+        display: inline-block;
+        margin-top: 90px;
+        background-color: white;
+
+    }
+
+    header:hover nav ::before{
+        content: "";
+    }
 
 }
