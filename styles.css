@@ -264,7 +264,7 @@ p {
 
 input[type="radio"]{
     opacity: 0;
-    margin-bottom: 11px; 
+    margin-bottom: 14px; 
 }
 
 input[type="radio"]:checked+label{
@@ -284,11 +284,17 @@ input[type="radio"]:checked+label::after{
 
 
 
-
-@media all and (max-width : 767px) {
+/*ajustements pour les écrans les moins larges*/
+@media all  and (max-width : 767px) {
     .tabs nav label {
         width: 100px;
         align-items: center;
         font-size: 0.6rem;
     }
+
+    input[type="radio"]{
+        margin-bottom: 20px; 
+    }
+
+
 }
