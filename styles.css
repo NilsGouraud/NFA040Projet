@@ -101,7 +101,7 @@ form>h1::after,.ourService::after,input[type="radio"]:checked+label::after{
 }
 
 
-button, .bgConsulting, .financialPlanning img, .quote, .tabs nav, .freeConsulting{
+header, button, .bgConsulting, .financialPlanning img, .quote, .tabs nav, .freeConsulting{
     width: 100%;
 }
 
@@ -109,6 +109,9 @@ button, .bgConsulting, .financialPlanning img, .quote, .tabs nav, .freeConsultin
 header {
     justify-content: space-around;
     padding: 15px;
+    position: fixed;
+    background-color: white;
+    height: 30px;
 }
 
 header>img {
@@ -129,6 +132,7 @@ a>img {
 }
 
 .freeConsulting {
+    margin-top: 60px;
     background: url("ressources/freeConsulting.png");
     background-size: cover;
     background-position: center;
@@ -240,7 +244,7 @@ p {
 }
 
 .quote {
-    padding: 10px 50px;
+    padding: 10px 50px; 
 }
 
 .tabs nav {
@@ -278,19 +282,21 @@ input[type="radio"]:checked+label::after{
 
 
 
-
+label{
+    font-size: 1rem;
+}
 
 
 
 /*ajustements pour les écrans les moins larges*/
 @media all  and (max-width : 767px) {
-    .tabs nav label {
-        align-items: center;
-        font-size: 0.6rem;
+    label {
+        font-size: 0.8rem;
     }
 
     input[type="radio"]{
     }
 
+ 
 
 }
