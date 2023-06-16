@@ -279,3 +279,16 @@ input[type="radio"]:checked+label::after{
 }
 
 
+
+
+
+
+
+
+@media all and (max-width : 767px) {
+    .tabs nav label {
+        width: 100px;
+        align-items: center;
+        font-size: 0.6rem;
+    }
+}
