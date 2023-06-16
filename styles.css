@@ -213,6 +213,8 @@ aside>img {
 .ourService h2 {
     font-size: 0.7rem;
     font-weight: 200;
+    overflow: hidden;
+
 }
 
 .whatWeDo {
@@ -232,6 +234,10 @@ aside>img {
 
 .planningText {
     margin-left: 20px;
+    aspect-ratio: 1/0.2;
+    overflow: hidden;
+    padding-bottom: 0;
+
 }
 
 .financialPlanning img {
@@ -241,10 +247,13 @@ aside>img {
 
 p {
     font-weight: 100;
+    overflow: hidden;
+    height: inherit;
 }
 
 .quote {
     padding: 10px 50px; 
+    margin-top: 20px;
 }
 
 .tabs nav {
@@ -293,7 +302,7 @@ label{
 
 h1{
     font-weight: 900;
-    padding: 15px 0 25px 0;
+    padding: 0 0 25px 0;
 }
 
 
