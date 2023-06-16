@@ -1,0 +1,226 @@
+body {}
+
+section,
+header,
+nav,
+a,
+.bgConsulting,
+form,
+label,
+button,
+.whatWeDo>div,
+.financialPlanning {
+    display: flex;
+}
+
+
+
+section,
+form,
+label,
+.bgConsulting,
+.whatWeDo>div {
+    flex-direction: column;
+}
+
+
+nav,
+header,
+a,
+.bgConsulting,
+.whatWeDo>div {
+    align-items: center;
+}
+
+a, input[type="radio"]+label, button, header>img, aside>img,.V{
+    cursor:pointer;
+}
+
+.ourService h2,
+p {
+    color: grey;
+}
+
+form>h1::after,.ourService::after,input[type="radio"]:checked+label::after{
+    border-bottom: 1px solid rgb(14, 70, 255);
+}
+
+
+button, .bgConsulting, .financialPlanning img, .quote, .tabs nav, .freeConsulting{
+    width: 100%;
+}
+
+
+header {
+    justify-content: space-around;
+    padding: 15px;
+}
+
+header>img {
+    height: 20px;
+}
+
+nav {
+    justify-content: center;
+    height: 5px;
+}
+
+nav>a {
+    padding: 2px;
+}
+
+a>img {
+    filter: invert();
+    padding: 2px;
+}
+
+.freeConsulting {
+    background: url("ressources/freeConsulting.png");
+    background-size: cover;
+    background-position: center;
+
+}
+
+.bgConsulting {
+    justify-content: space-evenly;
+    background: linear-gradient(90deg, rgba(14, 70, 255, 1), rgba(14, 70, 255, 0.685), rgba(14, 70, 255, 0.616), rgba(14, 70, 255, 0.589));
+}
+
+
+form {
+    padding: 15px 40px;
+    margin: 5% 25% 5% 0;
+    justify-content: center;
+    border-radius: 5%;
+    background-color: white;
+}
+
+
+
+form>h1::after {
+    display: block;
+    content: "";
+    left: 0;
+    padding-bottom: 10px;
+    width: 28%;
+}
+
+
+input[type="text"],button{
+    border:none;
+    padding: 10px 0;
+}
+
+input[type="text"] {
+    margin: 10px 0 10px 0;
+    background-color: rgb(238, 238, 238);
+}
+
+button {
+    color: white;
+    background-color: rgb(14, 70, 255);
+    border-radius: 4px;
+    font-weight: 800;
+    font-size: 0.6rem;
+    justify-content: center;
+}
+
+.V {
+    height: 5px;
+}
+
+.bgConsulting .V{
+    height: 15px;
+    margin-bottom:20px;
+}
+
+aside {
+    border-left: 1px solid grey;
+}
+
+aside>img {
+    height: 10px;
+}
+
+.ourService {
+    margin-top: 50px;
+}
+
+
+.ourService::after {
+    content: "";
+    width: 7%;
+}
+
+.ourService h2 {
+    font-size: 0.7rem;
+    font-weight: 200;
+}
+
+.whatWeDo {
+    margin: 0 10%;
+}
+
+.financialPlanning {
+    justify-content: space-between;
+}
+
+
+
+.financialPlanning>* {
+    width: 50%;
+    padding: 20px 0;
+}
+
+.planningText {
+    margin-left: 20px;
+}
+
+.financialPlanning img {
+    border-radius: 3%;
+    margin-right: 20px;
+}
+
+p {
+    font-weight: 100;
+}
+
+.quote {
+    padding: 10px 50px;
+}
+
+.tabs nav {
+    padding-top: 35px;
+    padding-bottom: 20px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid gray;
+    justify-content: space-around;
+}
+
+.tabs nav label {
+    width: 150px;
+    align-items: center;
+}
+.tabs nav  {
+    justify-content: center;
+}
+
+
+
+input[type="radio"]{
+    opacity: 0;
+    margin-bottom: 11px; 
+}
+
+input[type="radio"]:checked+label{
+    color:rgb(14, 70, 255);
+}
+
+input[type="radio"]:checked+label::after{
+    content: "";
+
+    height: 0px;
+    width: 100%;
+}
+
+
