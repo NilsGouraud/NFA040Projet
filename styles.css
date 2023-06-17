@@ -181,6 +181,14 @@ button {
     font-weight: 800;
     font-size: 0.6rem;
     justify-content: center;
+    transition: 0.3s;
+    outline: solid 0.5px rgb(14, 70, 255);
+    outline-offset: -0.5px;
+
+}
+button:hover{
+    background-color: white;
+    color: rgb(14, 70, 255);
 }
 
 .V {
