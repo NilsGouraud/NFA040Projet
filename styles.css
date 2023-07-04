@@ -1,6 +1,7 @@
-body {
+html,body {
     margin: 0;
     position: absolute;
+    width: 100%;
 }
 
 /*reset de la feuille de style du navigateur
@@ -53,6 +54,10 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+/*fin de la partie reset*/
+
+
+
 
 
 section,
@@ -136,7 +141,6 @@ a>img {
     background: url("ressources/freeConsulting.png");
     background-size: cover;
     background-position: center;
-
 }
 
 .bgConsulting {
@@ -215,7 +219,7 @@ aside>img {
 
 .ourService::after {
     content: "";
-    width: 7%;
+    width: 20%;
 }
 
 .ourService h2 {
@@ -227,7 +231,10 @@ aside>img {
 
 .whatWeDo {
     margin: 0 10%;
+    justify-content: center;
+    align-items: center;
 }
+
 
 .financialPlanning {
     justify-content: space-between;
@@ -237,6 +244,7 @@ aside>img {
 
 .financialPlanning>* {
     width: 50%;
+    max-width: 700px;
     padding: 20px 0;
 }
 
@@ -261,7 +269,11 @@ p {
 
 .quote {
     padding: 10px 50px; 
-    margin-top: 20px;
+    margin: 20px 0;
+}
+
+.tabs{
+    max-width: 1500px;
 }
 
 .tabs nav {
@@ -310,7 +322,7 @@ label{
 
 h1{
     font-weight: 900;
-    padding: 0 0 25px 0;
+    padding: 10px 0;
 }
 
 .barre{
@@ -333,14 +345,12 @@ h1{
         font-size: 0.5rem;
     }
 
-    input[type="radio"]{
-    }
+   
 
     nav a{
         display: none;
     }
-    nav{
-    }
+  
     .barre{
         display: block;
         border: 2px solid black;
