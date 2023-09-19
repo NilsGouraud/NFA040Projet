@@ -429,6 +429,8 @@ a>button{
     color: black;
     position: absolute;
     z-index: 1;
+    top: 50px;
+
 }
 .deroulant>*{
     padding: 10px;
@@ -445,7 +447,6 @@ a>button{
 a>button:focus +.deroulant{
     display: block;
     background-color: white;
-    top: 50px;
     border-left:1px solid rgb(206, 206, 206);
     border-bottom:1px solid rgb(206, 206, 206);
     border-right:1px solid rgb(206, 206, 206);  
@@ -487,6 +488,7 @@ h1{
     .deroulant{
         right: 116px;
         border: 1px solid rgb(206, 206, 206);
+        top: 0;
     }
     nav a{
         display: none;
