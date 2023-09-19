@@ -7,9 +7,9 @@ html,body {
 /*reset de la feuille de style du navigateur
 
 source :
- http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
+http://meyerweb.com/eric/tools/css/reset/ 
+v2.0 | 20110126
+License: none (public domain)
 */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -24,45 +24,45 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
-	display: block;
+    display: block;
 }
 body {
-	line-height: 1;
+    line-height: 1;
 }
 ol, ul {
-	list-style: none;
+    list-style: none;
 }
 blockquote, q {
-	quotes: none;
+    quotes: none;
 }
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: '';
-	content: none;
+    content: '';
+    content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
-button, input[type="submit"], input[type="reset"] {
-	background: none;
-	color: inherit;
-	border: none;
-	padding: 0;
-	font: inherit;
-	cursor: pointer;
-	outline: inherit;
+button {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
 }
 
 
@@ -80,8 +80,7 @@ a,
 form,
 label,
 button,
-.whatWeDo>div,
-.financialPlanning {
+.whatWeDo>div{
     display: flex;
 }
 
@@ -95,6 +94,9 @@ label,
     flex-direction: column;
 }
 
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
 
 nav,
 header,
@@ -113,12 +115,47 @@ p {
     color: grey;
 }
 
+/*system d'onglets. En fonction du bouton radio (visible à son label) selectionné, l'image et le titre changent.*/
 form>h1::after,.ourService::after,input[type="radio"]:checked+label::after{
     border-bottom: 1px solid rgb(14, 70, 255);
 }
 
+/*le contenu des onglets n'est révélé que lorsque l'un d'entre eux est sélectionné*/
+#contentWhatWeDo{
+    display: none;
+    justify-content: space-between;
+    opacity: 0;
+    
+}
 
-header, button, .bgConsulting, .financialPlanning img, .quote, .tabs nav, .freeConsulting{
+.tabs:has(nav>span>input[id="1"]:checked) #contentWhatWeDo.financialPlanning {
+    display: flex;
+    animation: fadeIn 0.5s forwards;
+}
+@keyframes fadeIn{
+    from{
+        
+    }to{
+        opacity: 1;
+    }
+}
+
+.tabs:has(nav>span>input[id="2"]:checked) #contentWhatWeDo.investmentAdvisor {
+    display: flex;
+    animation: fadeIn 0.5s forwards;
+}
+.tabs:has(nav>span>input[id="3"]:checked) #contentWhatWeDo.savingMoney {
+    display: flex;
+    animation: fadeIn 0.5s forwards;
+}
+.tabs:has(nav>span>input[id="4"]:checked) #contentWhatWeDo.mortgageAdvisor {
+    display: flex;
+    animation: fadeIn 0.5s forwards;
+}
+
+
+
+header, button, .bgConsulting, #contentWhatWeDo img, .quote, .tabs nav, .freeConsulting{
     width: 100%;
 }
 
@@ -137,15 +174,20 @@ header>img {
 
 nav {
     justify-content: center;
+    font-weight: 550;
 }
 
 nav>a {
     padding: 2px;
 }
 
-a>img {
-    filter: invert();
-    padding: 2px;
+a img {
+    padding: 10px;
+    height: 20px;
+}
+
+.noir{
+    filter: none;
 }
 
 .freeConsulting {
@@ -200,15 +242,19 @@ input[type="text"] {
     transition: 0.3s;
     outline: solid 0.5px rgb(14, 70, 255);
     outline-offset: -0.5px;
-
+    
 }
 .button:hover{
     background-color: white;
     color: rgb(14, 70, 255);
 }
 
+
+
+
+
 .V {
-    height: 5px;
+    height: 10px;
 }
 
 .bgConsulting .V{
@@ -238,7 +284,7 @@ aside>img {
     font-size: 0.7rem;
     font-weight: 200;
     overflow: hidden;
-
+    
 }
 
 .whatWeDo {
@@ -248,16 +294,14 @@ aside>img {
 }
 
 
-.financialPlanning {
-    justify-content: space-between;
-}
 
 
 
-.financialPlanning>* {
+#contentWhatWeDo>* {
     width: 50%;
     max-width: 700px;
     padding: 20px 0;
+    
 }
 
 .planningText {
@@ -265,10 +309,10 @@ aside>img {
     aspect-ratio: 1/0.2;
     overflow: hidden;
     padding-bottom: 0;
-
+    
 }
 
-.financialPlanning img {
+#contentWhatWeDo img {
     border-radius: 3%;
     margin-right: 20px;
 }
@@ -321,20 +365,54 @@ input[type="radio"]:checked+label::after{
     width: 100%;
 }
 
+
+
+
+
+
 nav a:hover, nav label:hover{
     color: rgb(14, 70, 255);
     background-color: rgb(247, 247, 247);
     border-radius: 3px;
 }
 
-
-a>button~img{
-    transform: rotate(0deg);
-    transition: .3s;
+nav a:hover img{
+    filter:
+    invert(92%)
+    sepia(100%)
+    saturate(7481%)
+    hue-rotate(248deg)
+    brightness(93%)
+    contrast(143%);
+}
+nav a img{
+    filter: invert();
+    animation: rotation0 0.3s ;
 }
 
-a>button:focus~img{
-    transform: rotate(-180deg);
+@keyframes rotation180{
+    from{
+        
+    }
+    to{
+        transform: rotate(-180deg);
+    }
+}
+@keyframes rotation0{
+    
+    from{
+        transform: rotate(-180deg);
+    }
+    to{
+        transform: rotate(0deg);
+    }
+}
+.faireDerouler{
+    display: flex;
+    align-items: center;
+}
+.faireDerouler:focus img{
+    animation: rotation180 0.3s forwards;
 }
 a>button:focus{
     pointer-events: none; /*si on clique dessus à nouveau, le bouton ne sera plus sélectionné*/
@@ -346,7 +424,19 @@ a>button{
 
 .deroulant{
     display: none;
+    color: black;
 }
+.deroulant>*{
+    color: black;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: 100;
+}
+.deroulant>*:hover{
+    color: blue;
+    
+}
+
 
 a>button:focus +.deroulant{
     display: block;
@@ -381,17 +471,17 @@ h1{
         font-size: 0.8rem;
     }
     
-
+    
     p{
         font-size: 0.5rem;
     }
-
-   
-
+    
+    
+    
     nav a{
         display: none;
     }
-  
+    
     .barre{
         display: block;
         border: 2px solid black;
@@ -399,25 +489,25 @@ h1{
         height: 0px;
         margin: 1px;
     }
-
+    
     header:hover nav a{
         display: block;
         border: solid 1px grey;
     }
- 
+    
     header:hover nav{
         display: inline-block;
         margin-top: 100px;
         background-color: white;
-
+        
     }
-
+    
     header:hover .barre{
         display: none;
     }
-
+    
     header:hover nav ::before{
         content: "";
     }
-
+    
 }
