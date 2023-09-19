@@ -328,16 +328,20 @@ nav a:hover, nav label:hover{
 }
 
 
-a>button+img{
+a>button~img{
     transform: rotate(0deg);
     transition: .3s;
 }
 
-a>button:focus+img{
+a>button:focus~img{
     transform: rotate(-180deg);
 }
 a>button:focus{
     pointer-events: none; /*si on clique dessus à nouveau, le bouton ne sera plus sélectionné*/
+}
+
+a>button{
+    display: block;
 }
 
 .deroulant{
@@ -346,6 +350,9 @@ a>button:focus{
 
 a>button:focus +.deroulant{
     display: block;
+    position: absolute;
+    background-color: white;
+    top: 50px;
 }
 
 
