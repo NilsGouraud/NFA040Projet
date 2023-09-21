@@ -427,6 +427,16 @@ a>button:focus +.deroulant{
     border-radius: 5px;
 }
 
+svg{
+    height:200%;
+}
+footer{
+    display: block;
+    justify-content: center;
+    width: 66%;
+    margin-left: 30%;
+    margin-right: 30%;
+}
 
 
 label{
