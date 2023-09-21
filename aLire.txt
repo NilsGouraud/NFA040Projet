@@ -1,0 +1,10 @@
+L'affichage de la page est différent si l'écran fait moins de 767px de large.
+Le formulaire renvoie vers "http://www.action-creation.fr/cnam/HTML_CSS/chapitre4/validateForm.php"
+Si vous souhaites consultez l'image SVG seule, elle est disponible dans le répertoire "/documents svg". 
+
+
+Différences avec le projet rendu en premiere session :
+-Les menus déroulants ( homepage, misc, about...) sont désormais fonctionnels et s'animent lors d'un focus. Les options des menus sont directement tirées du site original.
+-Les onglets sont désormais fonctionnels si vous utilisez chrome (grâce à la fonction CSS has()).
+-Si vous utilisez un autre navigateur, un script change la feuille de style de la page; les onglets sont alors conformes à l'énoncé.
+-L'image vectorielle a été réalisée uniquement avec un éditeur de texte.
