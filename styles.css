@@ -165,7 +165,6 @@ header, button, .bgConsulting, #contentWhatWeDo img, .quote, .tabs nav, .freeCon
 header {
     justify-content: space-around;
     padding: 15px;
-    position: fixed;
     background-color: white;
     height: 30px;
 }
@@ -193,10 +192,10 @@ a img {
 }
 
 .freeConsulting {
-    margin-top: 60px;
     background: url("ressources/freeConsulting.png");
     background-size: cover;
     background-position: center;
+    
 }
 
 .bgConsulting {
@@ -413,6 +412,7 @@ nav a img{
     display: flex;
     align-items: center;
 }
+
 .faireDerouler:focus img{
     animation: rotation180 0.3s forwards;
 }
@@ -428,9 +428,8 @@ a>button{
     display: none;
     color: black;
     position: absolute;
-    z-index: 1;
     top: 50px;
-
+    
 }
 .deroulant>*{
     padding: 10px;
@@ -489,9 +488,11 @@ h1{
         right: 116px;
         border: 1px solid rgb(206, 206, 206);
         top: 0;
+        z-index: 1;
     }
     nav a{
         display: none;
+        background-color: white;
     }
     
     .barre{
@@ -518,6 +519,6 @@ h1{
         display: none;
     }
     
-
+    
     
 }
