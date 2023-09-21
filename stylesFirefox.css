@@ -434,8 +434,7 @@ h1{
     flex-direction: column;
     margin-right: 3px;
 }
-
-
+/*animation des menus déroulants*/
 @keyframes rotation180{
     from{
         
@@ -453,6 +452,7 @@ h1{
         transform: rotate(0deg);
     }
 }
+/*animation des onglets*/
 @keyframes fadeIn{
     from{
         
