@@ -148,14 +148,6 @@ form>h1::after,.ourService::after,input[type="radio"]:checked+label::after{
     animation: fadeIn 0.5s forwards;
 }
 
-@keyframes fadeIn{
-    from{
-        
-    }to{
-        opacity: 1;
-    }
-}
-
 
 header, button, .bgConsulting, #contentWhatWeDo img, .quote, .tabs nav, .freeConsulting{
     width: 100%;
@@ -391,23 +383,6 @@ nav a img{
     animation: rotation0 0.3s ;
 }
 
-@keyframes rotation180{
-    from{
-        
-    }
-    to{
-        transform: rotate(-180deg);
-    }
-}
-@keyframes rotation0{
-    
-    from{
-        transform: rotate(-180deg);
-    }
-    to{
-        transform: rotate(0deg);
-    }
-}
 .faireDerouler{
     display: flex;
     align-items: center;
@@ -472,6 +447,29 @@ h1{
     margin-right: 3px;
 }
 
+@keyframes rotation180{
+    from{
+        
+    }
+    to{
+        transform: rotate(-180deg);
+    }
+}
+@keyframes rotation0{
+    from{
+        transform: rotate(-180deg);
+    }
+    to{
+        transform: rotate(0deg);
+    }
+}
+@keyframes fadeIn{
+    from{     
+    }to{
+        opacity: 1;
+    }
+}
+
 /*ajustements pour les écrans les moins larges*/
 @media all  and (max-width : 767px) {
     label {
@@ -518,14 +516,4 @@ h1{
     header nav:hover .menuCondense{
         display: none;
     }
-
-
-/*has() n'est pas compatible avec le navigateur mozilla. Dans ce cas, afficher le premier onglet par défault*/
-#contentWhatWeDo, x:-moz-any-link, x:default{
-    display: flex;
-    animation: fadeIn 0.5s forwards;
-}
-    
-    
-    
 }
