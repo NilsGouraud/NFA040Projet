@@ -6,6 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
+    <script>
+        let isFirefox=navigator.userAgent.includes("Firefox");
+        let isChrome=navigator.userAgent.includes("Chrome");
+        if(isFirefox){
+            document.querySelector("link[href='styles.css']").href="stylesFirefox.css";
+            console.log("firefox");
+        }
+        if(isChrome){
+            console.log("chrome");
+        }
+    </script>
 </head>
 
 <body>
